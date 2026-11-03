@@ -9,8 +9,10 @@ def reverse_words(text: str) -> str:
 
 
 def truncate(text: str, limit: int) -> str:
-    """Truncate with ellipsis (BROKEN: off-by-one)."""
-    return text[:limit] + "..." if len(text) > limit else text
+    """Truncate to exactly *limit* characters."""
+    if len(text) <= limit:
+        return text
+    return text[:limit]
 
 
 def count_vowels(text: str) -> int:
