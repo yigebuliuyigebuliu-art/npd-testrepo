@@ -25,7 +25,6 @@ def count_vowels(text: str) -> int:
 def sum_even_numbers(nums):
     """Return the sum of the even numbers in the list.
 
-    BUG: sums all numbers instead of only the even ones.
-    Expected: sum_even_numbers([1, 2, 3, 4]) -> 6
+    Example: sum_even_numbers([1, 2, 3, 4]) -> 6
     """
-    return sum(nums)
+    return sum(n for n in nums if n % 2 == 0)
