@@ -35,4 +35,4 @@ def count_consonants(text: str) -> int:
     A consonant is a letter that is not a vowel; spaces and punctuation are
     NOT consonants. Example: count_consonants("hello world") -> 7
     """
-    return sum(1 for ch in text.lower() if ch not in "aeiou")
+    return sum(1 for ch in text.lower() if ch.isalpha() and ch not in "aeiou")
