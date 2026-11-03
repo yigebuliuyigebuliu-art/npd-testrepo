@@ -20,3 +20,12 @@ def count_vowels(text: str) -> int:
     Expected: both upper- and lower-case vowels are counted (e.g. 'AEIOU' -> 5).
     """
     return sum(1 for ch in text if ch in "aeiou")
+
+
+def sum_even_numbers(nums):
+    """Return the sum of the even numbers in the list.
+
+    BUG: sums all numbers instead of only the even ones.
+    Expected: sum_even_numbers([1, 2, 3, 4]) -> 6
+    """
+    return sum(nums)
