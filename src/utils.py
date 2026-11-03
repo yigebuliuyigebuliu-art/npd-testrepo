@@ -14,12 +14,11 @@ def truncate(text: str, limit: int) -> str:
 
 
 def count_vowels(text: str) -> int:
-    """Count the vowels in the text.
+    """Count the vowels in the text (case-insensitive).
 
-    BUG: only lowercase vowels are counted, so 'AEIOU' returns 0.
-    Expected: both upper- and lower-case vowels are counted (e.g. 'AEIOU' -> 5).
+    Both upper- and lower-case vowels are counted (e.g. 'AEIOU' -> 5).
     """
-    return sum(1 for ch in text if ch in "aeiou")
+    return sum(1 for ch in text if ch in "aeiouAEIOU")
 
 
 def sum_even_numbers(nums):
