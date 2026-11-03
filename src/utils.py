@@ -11,3 +11,12 @@ def reverse_words(text: str) -> str:
 def truncate(text: str, limit: int) -> str:
     """Truncate with ellipsis (BROKEN: off-by-one)."""
     return text[:limit] + "..." if len(text) > limit else text
+
+
+def count_vowels(text: str) -> int:
+    """Count the vowels in the text.
+
+    BUG: only lowercase vowels are counted, so 'AEIOU' returns 0.
+    Expected: both upper- and lower-case vowels are counted (e.g. 'AEIOU' -> 5).
+    """
+    return sum(1 for ch in text if ch in "aeiou")
